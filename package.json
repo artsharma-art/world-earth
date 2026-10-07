@@ -1,0 +1,12 @@
+{
+  "name": "world-earth",
+  "version": "1.0.0",
+  "description": "Interactive 3D Earth explorer",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
