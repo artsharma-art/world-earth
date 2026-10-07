@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WORLD EARTH</title>
+
+  <link
+    href="https://cesium.com/downloads/cesiumjs/releases/1.138/Build/Cesium/Widgets/widgets.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="cesiumContainer"></div>
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-icon">🌍</div>
+
+      <div>
+        <div class="brand-name">WORLD EARTH</div>
+        <div class="brand-subtitle">3D GLOBAL EXPLORER</div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button id="homeButton" class="control-button">
+        HOME
+      </button>
+
+      <button id="locationButton" class="control-button">
+        LOCATION
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel">
+
+    <div class="search-title">
+      EXPLORE THE WORLD
+    </div>
+
+    <div class="search-row">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search a city or location..."
+        autocomplete="off"
+      >
+
+      <button id="searchButton">
+        SEARCH
+      </button>
+    </div>
+
+    <div id="searchMessage" class="search-message"></div>
+
+  </div>
+
+  <div class="info-panel">
+
+    <div class="info-title">
+      WORLD EARTH
+    </div>
+
+    <div class="info-text">
+      Explore the planet in interactive 3D.
+    </div>
+
+    <div class="info-divider"></div>
+
+    <div class="info-row">
+      <span>MODE</span>
+      <strong>3D EARTH</strong>
+    </div>
+
+    <div class="info-row">
+      <span>STATUS</span>
+      <strong id="status">LOADING</strong>
+    </div>
+
+  </div>
+
+  <div class="loading-screen" id="loadingScreen">
+
+    <div class="loading-globe">
+      🌎
+    </div>
+
+    <div class="loading-title">
+      WORLD EARTH
+    </div>
+
+    <div class="loading-text">
+      Loading 3D Earth...
+    </div>
+
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+
+  </div>
+
+  <div class="error-panel" id="errorPanel">
+
+    <div class="error-title">
+      3D EARTH UNAVAILABLE
+    </div>
+
+    <div id="errorMessage">
+      Unable to load the Google 3D Earth data.
+    </div>
+
+    <button id="retryButton">
+      RETRY
+    </button>
+
+  </div>
+
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.138/Build/Cesium/Cesium.js"></script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
